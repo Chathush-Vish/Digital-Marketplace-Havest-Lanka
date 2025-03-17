@@ -42,11 +42,12 @@ function MyBids() {
               backgroundPosition: 'center',
             }}
           >
-            <div className='absolute top-[200px] left-[600px] bg-black/70 rounded-full px-8 py-1'>
+            <div className='absolute top-[200px] left-[380px] bg-black/70 rounded-full px-8 py-1'>
               <h1 className=" text-xl font-bold text-gray-100 text-center">
-                  My Posted Bids
+                My Bid Listings 
               </h1>
-              <p className='text-gray-100'>Manage your posted bids here</p>
+              <p className='text-gray-100 text-center '>Manage your posted bids here to
+              adjustment, and stay connected with potential buyers.</p>
             </div>
           </div>
 
@@ -73,11 +74,12 @@ function MyBids() {
               backgroundPosition: 'center',
             }}
           >
-            <div className='absolute top-[200px] left-[600px] bg-black/70 rounded-full px-8 py-1'>
-              <h1 className=" text-xl font-bold text-gray-100 text-center">
-                  My Posted Bids
+            <div className='absolute top-[200px] left-[380px] bg-black/70 rounded-full px-8 py-1'>
+            <h1 className=" text-xl font-bold text-gray-100 text-center">
+                My Bid Listings 
               </h1>
-              <p className='text-gray-100'>Manage your posted bids here</p>
+              <p className='text-gray-100 text-center'>Manage your posted bids here to
+              adjustment, and stay connected with potential buyers.</p>
             </div>
           </div>
 
