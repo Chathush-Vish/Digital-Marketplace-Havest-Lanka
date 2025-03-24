@@ -47,9 +47,6 @@ function ShopOwnerOrders() {
                   <thead>
                      <tr className=" border-b border-gray-200">
                         <th className="px-6 py-4 text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                           Order ID
-                        </th>
-                        <th className="px-6 py-4 text-xs font-semibold text-gray-600 uppercase tracking-wider">
                            Farmer
                         </th>
                         <th className="px-6 py-4 text-xs font-semibold text-gray-600 uppercase tracking-wider">
@@ -61,6 +58,9 @@ function ShopOwnerOrders() {
                         <th className="px-6 py-4 text-xs font-semibold text-gray-600 uppercase tracking-wider">
                            Status
                         </th>
+                        <th className="px-6 py-4 text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                           Operations
+                        </th>
                      </tr>
                   </thead>
 
@@ -70,11 +70,6 @@ function ShopOwnerOrders() {
                            className="hover:bg-gray-50 transition duration-150"
                            key={bid._id}
                         >
-                           <td className="px-6 py-4 whitespace-nowrap">
-                              <div className="text-sm font-medium text-sec-green">
-                                 {bid.postId}
-                              </div>
-                           </td>
                            <td className="px-6 py-4 ">
                               <div className="flex items-center">
                                  <div className="">
@@ -98,10 +93,25 @@ function ShopOwnerOrders() {
                               </div>
                            </td>
                            <td className="px-6 py-4 ">
-                              <span className="px-3 py-1 inline-flex  text-xs  font-semibold rounded-full bg-green-100 text-green-800">
-                                 <span className="h-2 w-2 rounded-full bg-green-600 mr-1.5 mt-1"></span>
+                              <span className={`px-3 py-1 inline-flex  text-xs  font-medium rounded-full  ${bid.status === "pending" ? "bg-gray-200 text-gray-500": bid.status === "Accepted" ? "bg-green-600 text-green-100":""}`}>
+                                 <span className={`h-2 w-2 rounded-full ${bid.status === "pending" ? "bg-green-600": bid.status === "Accepted" ? "bg-green-600":""}  mr-1.5 mt-1`}></span>
                                  {bid.status}
                               </span>
+                           </td>
+                           <td className="px-6 py-4 ">
+                              <div className="flex items-center">
+                                 <div className="">
+                                    {bid.status === "pending" ? (
+                                       <button className="w-24 rounded h-8 bg-gray-100 text-gray-400 text-xs" disabled>
+                                          Pay Now
+                                       </button>
+                                    ) : bid.status === "Accepted" ? (
+                                       <button className="w-24 rounded h-8 bg-sec-green text-white text-xs">
+                                          Pay Now
+                                       </button>
+                                    ):""}
+                                 </div>
+                              </div>
                            </td>
                         </tr>
                      ))}
