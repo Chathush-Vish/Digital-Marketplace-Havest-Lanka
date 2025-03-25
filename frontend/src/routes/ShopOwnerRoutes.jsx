@@ -10,6 +10,7 @@ import ShopOwnerOrders from "../pages/shopOwnerManagement/ShopOwnerOrders";
 import ShopOwnerInbox from "../pages/shopOwnerManagement/ShopOwnerInbox";
 import ManageInventory from "../pages/shopOwnerManagement/ManageInventory";
 import DailyPrice from "@/components/other/DailyPrice";
+import ShopOwnerFinance from "@/pages/shopOwnerManagement/ShopOwnerFinance";
 
 function ShopOwnerRoutes() {
    return (
@@ -26,7 +27,7 @@ function ShopOwnerRoutes() {
                <DailyPrice />
             </div>
 
-            <div className="mt-28">
+            <div className="mt-[105px]">
                {/* Routes for shopowner's pages */}
                <Routes>
                   <Route path="/" element={<ShopOwnerDashboard />}></Route>
@@ -37,6 +38,7 @@ function ShopOwnerRoutes() {
                      path="/inventory"
                      element={<ManageInventory />}
                   ></Route>
+                  <Route path="/finance" element={<ShopOwnerFinance />}></Route>
                </Routes>
             </div>
             {/* Footer showing */}
