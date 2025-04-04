@@ -8,7 +8,7 @@ Backend: Node.js, Express.js
 Database: MongoDB
 
 ✨ Features
-✅ Farmer Portal: Farmers can list vegetables with minimum price expectations.
+✅ Farmer Portal: Farmers can list vegetables with minimum price expectations.<br>
 ✅ Bidding System: Sellers can bid on listed produce.
 ✅ Government Price Display: Real-time government-regulated prices for vegetables.
 ✅ Secure Authentication: User registration and login.
